@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Item from "./Components/Item.js";
+import Ref from "./Components/Ref.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+/* let intialList = [
+  { name: "tomato", calorie: 20 },
+  /* { name: "rice", calorie: 30 },
+  { name: "candy", calorie: 100 },
+];
+ */
+function App() { return (
+  
+       <div> <Ref />
     </div>
   );
+
 }
 
 export default App;
+
+
+/* const [list, setList] = useState(intialList);
+
+  const removeItemHandler = () => {
+    const filteredList = list.filter((v) => v.calorie <= 50);
+    setList(filteredList);
+  };
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1> Grocery List </h1>
+        {list.map((v, k) => {
+          return <Item key={`${k}${v.name}${v.calorie}`} item={v}></Item>;
+        })}
+        <button onClick={removeItemHandler}> Remove </button>
+      </header> */
